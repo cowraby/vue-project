@@ -27,10 +27,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 路由介绍
 路由结构如下
 
--home
---group
---task
---plan
---summary
---work
--login
+
