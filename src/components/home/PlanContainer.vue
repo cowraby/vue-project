@@ -78,7 +78,7 @@
 <script>
     import moment from 'moment'
     export default {
-        name: "GroupContainer",
+        name: "PlanContainer",
         data() {
             return ({
                 weekNum: "01",

@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../container/Home'
-import HelloWorld from '@/components/HelloWorld'
-import GroupContainer from '../container/GroupContainer'
+import HelloWorld from '@/components/home/HelloWorld'
+import PlanContainer from '@/components/home/PlanContainer'
+import TaskContainer from '@/components/home/TaskContainer'
+import ShebeiContainer from '@/components/home/ShebeiContainer'
+import ConsoleContainer from '@/components/home/ConsoleContainer'
 import Login from '../container/Login'
 
 Vue.use(Router)
@@ -17,30 +20,38 @@ export default new Router({
         children:[
           {
             path: '',
-            name: 'GroupContainer',
-            component: GroupContainer,
+            name: 'ConsoleContainer',
+            component: ConsoleContainer,
             meta:{            
               requiresAuth: true,  // 添加该字段，表示进入这个路由是需要登录的        
             },
           },
           {
-              path: 'group',
-              name: 'GroupContainer',
-              component: GroupContainer,
+            path: 'console',
+            name: 'ConsoleContainer',
+            component: ConsoleContainer,
+            meta:{            
+              requiresAuth: true,  // 添加该字段，表示进入这个路由是需要登录的        
+            },
+          },
+          {
+              path: 'shebei',
+              name: 'ShebeiContainer',
+              component: ShebeiContainer,
               meta:{            
                 requiresAuth: true,  // 添加该字段，表示进入这个路由是需要登录的        
               },
           },{
             path: 'plan',
-            name: 'HelloWorld',
-            component: HelloWorld,
+            name: 'PlanContainer',
+            component: PlanContainer,
             meta:{            
               requiresAuth: true,  // 添加该字段，表示进入这个路由是需要登录的        
             },
           },{
             path: 'task',
-            name: 'HelloWorld',
-            component: HelloWorld,
+            name: 'TaskContainer',
+            component: TaskContainer,
             meta:{            
               requiresAuth: true,  // 添加该字段，表示进入这个路由是需要登录的        
             },
